@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>
+        JSON in JS
+    </title>
+</head>
+
+<body>
+    <p id="results"></p>
+    <script>
+        var MyObj = {
+            name: "Jaskirat",
+            age: 14,
+            grade: 9
+        };
+        var MyJSON = JSON.stringify(MyObj);
+        var NewObj = JSON.parse(MyJSON);
+        document.getElementById("results").innerHTML = MyObj.name;
+    </script>
+</body>
+
+</html>
