@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        Promises in JS
+    </title>
+</head>
+
+<body>
+    <p id="results"></p>
+    <script>
+        function MyDisplayer(some) {
+            document.getElementById("results").innerHTML = some;
+        }
+
+        function sum(a, b) {
+            var sum = a + b;
+            MyDisplayer(sum);
+        }
+        let MyPromise = new Promise(function(MyResolve, MyReject) {
+            let x = 0
+            if (x == 0) {
+                MyResolve("OK");
+            } else {
+                MyReject("error");
+            }
+        });
+        MyPromise.then(
+            function(value) {
+                sum(5, 5);
+            },
+
+            function(error) {
+                sum(error);
+            }
+        )
+    </script>
+</body>
+
+</html>
